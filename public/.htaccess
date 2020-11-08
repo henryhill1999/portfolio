@@ -6,6 +6,7 @@ Header always set Content-Security-Policy "upgrade-insecure-requests;"
 
 RewriteBase /
 RewriteRule ^index\.html$ - [L]
+RewriteCond %{HTTP_HOST} !scry
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.html [L]
